@@ -1,5 +1,3 @@
-<body>
-
 <div class="rectangle_1">
     <h3 class="rct1_top">Ветеринарный сервис</h3>
     <p class="rct1_bottom">Сервис поиска</p>
@@ -38,19 +36,27 @@
     <div class="rct4_content">
         <h3 class="rct4_header">Не знаете что с вашим питомцем?</h3>
         <p class="rct4_gray_text">Наши специалисты помогут разобраться</p>
-        <p>Оставьте заявку на бесплатную видео-консультацию <br> с нашими специалистами</p>
-        <div class="rct4_attention">
-            <img class="attention_logo" height="28" src="images/Attention.svg" width="28">
-            <p class="attention_text">У вас должен быть аккаунт в WhatsApp или Viber</p>
+        <p class="rct4_text_bottom">Оставьте заявку на бесплатную консультацию <br> с нашими специалистами</p>
+        <p class="rct4_messenger_selector_text">Выберите удобный для Вас мессенджер:</p>
+        <div class="messenger_selector">
+            <input type="radio" name="messenger" value="telegram">
+            <img class="messenger_icon" src="images/Telegram_icon.png">
+            <p class="messenger_name">Telegram</p>
+            <input type="radio" name="messenger" value="whatsapp">
+            <img class="messenger_icon" src="images/Whatsapp_icon.png">
+            <p class="messenger_name">WhatsApp</p>
+            <input type="radio" name="messenger" value="viber">
+            <img class="messenger_icon" src="images/Viber_icon.png">
+            <p class="messenger_name">Viber</p>
         </div>
         <form class="registration">
             <input class="reg_pole" id="reg_name" placeholder="Ваше имя" type="text">
             <input class="reg_pole" id="reg_tel" placeholder="Ваш номер телефона" type="tel">
-            <input class="reg_pole" id="reg_submit" type="submit" value="Перезвоните мне">
+            <input class="reg_pole" id="reg_submit" type="submit" value="Напишите мне">
         </form>
     </div>
 
-    <img height="438" id="Dog" src="images/Dog.png" width="559">
+    <img height="363" id="Dog" src="images/Dog.png" width="464">
     <form>
         <input id="rct4_close_button" src="images/close_icon.png" type="image">
     </form>
@@ -68,111 +74,21 @@
     </h1>
     <div class="region_selector_bottom">
         <p>Район:</p>
-        <button autofocus class="region_button" value="next">Центральный</button>
-        <button class="region_button">Автозаводской</button>
-        <button class="region_button">Комсомольский</button>
-        <button class="region_button">Шлюзовой</button>
-    </div>
-</div>
-
-{{#each clinics}}
-    <div class="product_card">
-        <div class="product_card_left">
-            <div class="card_info">
-                <img class="clinic_logo"
-                     width="96" height="96"
-                     src="{{#if image}} {{image}} {{else}} images/image_filler.svg {{/if}}">
-                <div>
-                    <h3 class="clinic_name">{{name}}</h3>
-                    <p class="clinic_working_hours">Сегодня работают до {{labour_time}}</p>
-                    <div class="clinic_rating">
-                        <img height="15" id="star" src="images/Star_1.svg" width="15">
-                        <p class="rating">{{rating}}</p>
-                        <p class="number_of_reviews">{{comments_num}} отзывов</p>
-                    </div>
-                </div>
-            </div>
-            <div class="recommendations">
-                <img height="16" id="Paw" src="images/Paw.svg" width="20">
-                <p class="rec_text">{{rec_perc}}% пользователей рекомендуют клинику</p>
-            </div>
-            <div class="clinic_tel">
-                <img class="call_icon" height="20" src="images/Call.svg" width="20">
-                <p class="tel_number">{{phone}}</p>
-            </div>
-            <div class="clinic_location">
-                <img class="location_icon" height="20" src="images/Location.svg" width="17">
-                <p class="address">{{address}}</p>
-            </div>
-            <p class="clinic_description">{{description}}</p>
+        <div class="region_button">
+        <input type="radio" name="region" autofocus id="region_button_1" value="Central">
+        <label for="region_button_1">Центральный</label>
         </div>
-
-        <div class="product_card_right">
-            <div class="product_card_right_top">
-                <div class="price_list">
-                    {{#each services}}
-                        <div class="service">
-                            <p class="name_of_service">{{@key}}</p>
-                            <p class="price">{{this}}</p>
-                        </div>
-                    {{/each}}
-                </div>
-                <button class="all_services">Все услуги</button>
-            </div>
-            <div class="product_card_right_bottom">
-                <p class="selector_text">
-                    Выберете день и время для записи на приём
-                </p>
-                <div class="date-time_selector">
-                    <div class="date_selector">
-                        <button class="date_button">Вт<br>9</button>
-                        <button class="date_button">Ср<br>10</button>
-                        <button autofocus class="date_button" value="next">Чт<br>11</button>
-                        <button class="date_button">Пт<br>12</button>
-                        <button class="date_button">Сб<br>13</button>
-                        <button class="date_button">Вс<br>14</button>
-                        <button class="date_button">Пн<br>15</button>
-                        <input class="next_date" src="images/Frame_133.svg" type="image">
-                    </div>
-                    <div class="time_selector">
-                        <button class="time_button">10:00</button>
-                        <button class="time_button">11:00</button>
-                        <button class="time_button">12:00</button>
-                        <button class="time_button">13:00</button>
-                        <button class="time_button">14:00</button>
-                        <button class="time_button">15:00</button>
-                        <button class="time_button">16:00</button>
-                        <button class="time_button">17:00</button>
-                        <button class="time_button">18:00</button>
-                        <button class="time_button">19:00</button>
-                        <button class="time_button">20:00</button>
-                    </div>
-                </div>
-            </div>
+        <div class="region_button">
+        <input type="radio" name="region"  id="region_button_2" value="Avtozavodskoy">
+        <label for="region_button_2">Автозаводской</label>
+        </div>
+        <div class="region_button">
+        <input type="radio" name="region"  id="region_button_3" value="Komsomolskiy">
+        <label for="region_button_3">Комсомольский</label>
+        </div>
+        <div class="region_button">
+        <input type="radio" name="region"  id="region_button_4" value="Shlyzovoy">
+        <label for="region_button_4">Шлюзовой</label>
         </div>
     </div>
-{{/each}}
-
-<!--
-<div class="load_more">
-    <button class="load_more_button">Загрузить еще</button>
 </div>
- <div class="reg_success" >
-    <img class="reg_success_paw" height="53"
-         src="public/images/Paw.svg"
-         width="66.5">
-    <div class="reg_success_text">
-        <h3 class="reg_success_text_header">
-            Вы успешно записались на консультацию
-        </h3>
-        <p class="reg_success_text_bottom">
-            В течение 10 минут наш специалист перезвонит вам
-        </p>
-    </div>
-    <form>
-        <input id="reg_success  _close_button" src="images/close_icon.png" type="image">
-    </form>
-</div>
--->
-
-</body>
