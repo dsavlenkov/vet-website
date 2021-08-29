@@ -46,4 +46,5 @@ $(document).on('click', '*[data-modal]', function (event) {
 
 $(document).on($.modal.CLOSE, function () {
     $('.date_selector input:checked').change(); // Update time-block after closing modal as data can be updated
+    $('body').css('position', 'inherit'); // Disable scroll preventing from modal script
 });
