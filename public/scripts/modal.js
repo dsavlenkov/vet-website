@@ -62,4 +62,6 @@ $(function () {
             $('.reg_submit_modal').attr('disabled', false);
         });
     });
+
+    $('body').css('position', 'fixed'); // Prevent scrolling down on mobile devices
 })
