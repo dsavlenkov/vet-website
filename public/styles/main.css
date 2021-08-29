@@ -127,27 +127,6 @@ body {
     font-size: 14px;
 }
 
-.show {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #FC842D;
-    border-radius: 16px;
-    width: 100px;
-    height: 42px;
-    outline: none;
-    border: none;
-    color: #FFFFFF;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-@media screen and (min-width: 501px) {
-    .show {
-        display: none;
-    }
-}
-
 .messenger_selector {
     display: flex;
     cursor: pointer;
@@ -163,8 +142,6 @@ body {
 
 .messenger_radio {
     -webkit-appearance: radio;
-    width: 13px;
-    height: 13px;
 }
 
 .messenger_name {
