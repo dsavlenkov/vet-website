@@ -42,8 +42,7 @@ app.get('/api/appointment', (request, response) => {
         request.query['time'],
         request.query['phone'],
         request.query['fio'],
-        request.query['animal'],
-        request.query['comment']
+        '-', '-',
     ).then(
         () => response.send({}),
         err => response.status(err.code).send({err: err.text})
@@ -76,4 +75,4 @@ app.get('/', (request, response) => {
     response.render('index')
 })
 
-app.listen(process.env.PORT)
+app.listen(api.serverPort)
