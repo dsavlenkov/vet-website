@@ -2,7 +2,7 @@
   "name": "vet-clinic",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.1",
+    "express-handlebars": "^6.0.7",
     "googleapis": "^85.0.0",
     "got": "^11.8.2",
     "just-clone": "^3.2.1",
